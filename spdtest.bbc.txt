@@ -1,0 +1,42 @@
+pi=3.14159265358979323846264338327950288
+i=0
+s=0
+WHILE i < 2010000
+  s=s+FNsin(i)
+  i=i+1
+ENDWHILE
+PRINT s
+QUIT
+
+DEF FNsin( in )
+in+=pi*0.5
+= FNs( in/pi )
+
+
+DEF FNcos( in )
+in+=pi
+= FNs( in/pi )
+
+DEF FNs( in )
+LOCAL out
+in = ABS in
+IF in AND 1 THEN
+  in = 1-(in-INTin)
+ELSE
+  in = in-INTin
+ENDIF
+IF in<0.5 THEN
+  out = FN_s( in )
+ELSE
+  out = 1-FN_s( 1-in )
+ENDIF
+= out * 2 -1
+
+DEF FN_s( in )
+LOCAL i,r
+i = (in-INTin)
+r = ( 0.5-ABS( i-0.5 ) )*0.7
+= (  i*i * 2  )*(1-r) + i*r
+
+
+

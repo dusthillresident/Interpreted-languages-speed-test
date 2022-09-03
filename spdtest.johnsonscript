@@ -1,0 +1,36 @@
+constant pi 3.14159265358979323846264338327950288;
+
+variable i s;
+while < i 2010000;
+ set s + s fnsin i;
+ set i + i 1;
+endwhile;
+print s;
+return 0;
+
+function fnsin  in;
+ set in  + in * pi 0.5;
+return fns / in pi;
+
+function fncos  in;
+ set in  + in pi;
+return fns / in pi;
+
+function fns  in  local  out;
+ set in  abs in;
+ if & in 1
+  set in  - 1 - in int in;
+ else
+  set in  - in int in;
+ endif
+ if < in 0.5
+  set out  fn_s in;
+ else
+  set out  - 1 fn_s - 1 in;
+ endif
+return + -1 * out 2 ;
+
+function fn_s  in  local  i r;
+ set i  - in int in;
+ set r  * (- 0.5 abs - i 0.5 ) 0.7;
+return + (* (* i i 2) (- 1 r)) * i r;
