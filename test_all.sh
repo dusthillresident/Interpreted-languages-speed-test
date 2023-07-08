@@ -17,3 +17,7 @@ echo
 echo "Testing lua5.1: "
 time lua spdtest.lua 
 echo
+
+echo "Testing scheme (guile): "
+time guile spdtest.scm
+echo
